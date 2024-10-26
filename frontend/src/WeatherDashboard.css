@@ -1,0 +1,100 @@
+.weather-dashboard {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  background: linear-gradient(to bottom right, #e0f7fa, #80deea); /* Gradient background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+h1 {
+  text-align: center; /* Center the heading */
+  color: #00796b; /* Teal color for headings */
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  flex: 1;
+  border: 2px solid #4CAF50; /* Green border */
+  border-radius: 5px; /* Rounded corners */
+}
+
+input:focus {
+  border-color: #45a049; /* Darker green on focus */
+  outline: none; /* Remove default outline */
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.alert {
+  color: red;
+  font-weight: bold;
+}
+
+.error {
+  color: #d32f2f; /* Dark red for error messages */
+  font-weight: bold;
+}
+
+.current-weather, .daily-summary {
+  background-color: #ffffff; /* White background for clarity */
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.temperature {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  font-size: 18px; /* Slightly larger font size */
+}
+
+.temperature .symbol {
+  margin-left: 5px; /* Space between temperature and symbol */
+  font-size: 24px; /* Larger symbol */
+}
+.temperature {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  font-size: 18px; /* Slightly larger font size */
+}
+
+.temperature .symbol {
+  margin-left: 5px; /* Space between temperature and symbol */
+  font-size: 24px; /* Larger symbol */
+}
+
+.temp-summary {
+  display: flex;
+  justify-content: space-between; /* Space out min, max, and average */
+  font-size: 18px; /* Font size for temperature summaries */
+  margin-top: 10px; /* Margin above summaries */
+}
+
+.temp-summary .symbol {
+  margin-left: 5px; /* Space between temperature and symbol */
+  font-size: 20px; /* Slightly larger symbol for summary */
+}
+
