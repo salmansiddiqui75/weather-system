@@ -15,7 +15,7 @@ public class SchedulingService {
 
     private final List<String> cities = Arrays.asList("Delhi", "Mumbai", "Chennai", "Bangalore", "Kolkata", "Hyderabad");
 
-    @Scheduled(fixedRate = 100000) // every 5 minutes
+    @Scheduled(fixedRate = 100000) 
     public void fetchWeatherData() {
         for (String city : cities) {
             weatherService.fetchAndSaveWeatherData(city);
