@@ -18,11 +18,9 @@ public class WeatherData {
     private String city;
     private double temp;
     private LocalDate date;
-    private double feelsLike;  // For feels_like temperature
+    private double feelsLike; 
     private String mainWeather;
     private Long timeStamp;
     private int humidity;
     private double windSpeed;
-
-    // Constructors, getters, and setters
 }
