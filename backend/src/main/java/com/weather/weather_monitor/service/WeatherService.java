@@ -38,7 +38,7 @@ public class WeatherService {
             int humidity = response.getMain().getHumidity();
             double windSpeed = response.getWind().getSpeed();
 
-            long dt = response.getDt(); // Unix timestamp
+            long dt = response.getDt(); 
 
 
             WeatherData weatherData = new WeatherData();
@@ -46,8 +46,8 @@ public class WeatherService {
             weatherData.setMainWeather(mainWeather);
             weatherData.setTemp(temp);
             weatherData.setFeelsLike(feelsLike);
-            weatherData.setTimeStamp(dt); // Set timestamp correctly
-            weatherData.setDate(LocalDate.now()); // Assuming you want to set today's date
+            weatherData.setTimeStamp(dt); 
+            weatherData.setDate(LocalDate.now()); 
             weatherData.setHumidity(humidity);
             weatherData.setWindSpeed(windSpeed);
 
@@ -61,8 +61,8 @@ public class WeatherService {
         List<WeatherData> dailyData = weatherDataRepository.findByCityAndDate(city, LocalDate.now());
 
         double sumTemp = 0;
-        double maxTemp = Double.MIN_VALUE; // Start with the lowest possible value
-        double minTemp = Double.MAX_VALUE; // Start with the highest possible value
+        double maxTemp = Double.MIN_VALUE; 
+        double minTemp = Double.MAX_VALUE; 
         double sumFeelsLike = 0;
         double sumHumidity = 0, sumWindSpeed = 0;
 
@@ -78,17 +78,16 @@ public class WeatherService {
             sumHumidity += humidity;
             sumWindSpeed += windSpeed;
 
-            // Update maxTemp if the current temperature is greater
             if (temp > maxTemp) {
                 maxTemp = temp;
             }
 
-            // Update minTemp if the current temperature is lower
+           
             if (temp < minTemp) {
                 minTemp = temp;
             }
 
-            // Logic for dominant weather condition
+            
             if (dominantWeatherCondition.isEmpty() || data.getMainWeather().equals(dominantWeatherCondition)) {
                 dominantWeatherCondition = data.getMainWeather();
             }
