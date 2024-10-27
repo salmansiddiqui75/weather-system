@@ -24,7 +24,7 @@ public class WeatherApiService {
         String url = UriComponentsBuilder.fromHttpUrl(apiUrl)
                 .queryParam("q", city)
                 .queryParam("appid", apiKey)
-                .queryParam("units", "metric") // Use metric units for Celsius
+                .queryParam("units", "metric") 
                 .toUriString();
 
         return restTemplate.getForObject(url, com.weather.weather_monitor.model.WeatherResponse.class);
