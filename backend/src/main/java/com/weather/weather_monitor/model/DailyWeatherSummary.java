@@ -18,8 +18,6 @@ public class DailyWeatherSummary {
     private double minTemp;
     private String dominantWeatherCondition;
     private double averageFeelsLike;
-    private double averageHumidity;    // New field for average humidity
+    private double averageHumidity;   
     private double averageWindSpeed;
-
-    // Constructors, getters, and setters
 }
