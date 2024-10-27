@@ -24,7 +24,7 @@ public class WeatherResponse {
         @JsonProperty("feels_like")
         private double feelsLike;
 
-        private int humidity; // Add humidity field
+        private int humidity; 
 
         public double getFeelsLike() {
             return feelsLike;
@@ -37,7 +37,7 @@ public class WeatherResponse {
 
     public static class Wind {
         @Getter
-        private double speed; // Add wind speed field
+        private double speed;
     }
 
     public static class Weather {
